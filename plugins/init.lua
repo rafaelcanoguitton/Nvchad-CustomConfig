@@ -22,6 +22,15 @@ return {
   },
   -- override default configs
   ["nvim-treesitter/nvim-treesitter"] = { override_options = overrides.treesitter },
+  ["nvim-treesitter/playground"] = {
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        playground = {
+          enable = true,
+        },
+      }
+    end,
+  },
   ["williamboman/mason.nvim"] = { override_options = overrides.mason },
 
   -- format & linting i need to revisit this :TODO
@@ -59,14 +68,14 @@ return {
     branch = "release",
   },
   ["lewis6991/gitsigns.nvim"] = {
-   config = function()
-      require 'gitsigns'.setup{
+    config = function()
+      require("gitsigns").setup {
         current_line_blame = true,
         current_line_blame_opts = {
           delay = 0,
         },
       }
-    end, 
+    end,
   },
   ["iamcco/markdown-preview.nvim"] = {
     ft = { "markdown" },
