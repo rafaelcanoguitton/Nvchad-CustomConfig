@@ -82,6 +82,7 @@ M.mason = {
     "phpcbf",
     "phpcs",
     "phpmd",
+    "blade-formatter",
     -- python stuff
     'pyright',
     'autoflake',
@@ -90,7 +91,15 @@ M.mason = {
     "blackd-client",
     "blue",
     "debugpy",
-    "python-lsp-server"
+    "python-lsp-server",
+
+    --markdown stuff
+    "markdownlint",
+    "marksman",
+
+    --general
+    "prettier",
+    "prettierd",
   }
 }
 

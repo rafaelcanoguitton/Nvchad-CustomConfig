@@ -59,7 +59,14 @@ return {
     branch = "release",
   },
   ["lewis6991/gitsigns.nvim"] = {
-    current_line_blame = true,
+   config = function()
+      require 'gitsigns'.setup{
+        current_line_blame = true,
+        current_line_blame_opts = {
+          delay = 0,
+        },
+      }
+    end, 
   },
   ["iamcco/markdown-preview.nvim"] = {
     ft = { "markdown" },
@@ -67,9 +74,10 @@ return {
   },
 }
 
--- enabling and managing plug plugins
+--this doesn't work it seems im dumb af
+-- -- enabling and managing plug plugins
 
-local Plug = vim.fn["plug#"]
-vim.call('plug#begin', '~/.config/nvim/plugged')
-Plug 'jwalton512/vim-blade'
-vim.call('plug#end')
+-- local Plug = vim.fn["plug#"]
+-- vim.call('plug#begin', '~/.config/nvim/plugged')
+-- Plug 'jwalton512/vim-blade'
+-- vim.call('plug#end')
