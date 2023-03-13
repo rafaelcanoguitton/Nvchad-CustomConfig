@@ -22,6 +22,15 @@ return {
   },
   -- override default configs
   ["nvim-treesitter/nvim-treesitter"] = { override_options = overrides.treesitter },
+  ["nvim-treesitter/playground"] = {
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        playground = {
+          enable = true,
+        },
+      }
+    end,
+  },
   ["williamboman/mason.nvim"] = { override_options = overrides.mason },
 
   -- format & linting i need to revisit this :TODO
