@@ -58,19 +58,28 @@ return {
   ["github/copilot.vim"] = {
     branch = "release",
   },
-  ["lewis6991/gitsigns.nvim"] = {
-   config = function()
-      require 'gitsigns'.setup{
-        current_line_blame = true,
-        current_line_blame_opts = {
-          delay = 0,
-        },
-      }
-    end, 
-  },
+  -- Apparrently NVchad config already includes this plugin
+  -- and a much more complicated setup so I'll just use that
+  -- TODO: Remove commented code
+  --  ["lewis6991/gitsigns.nvim"] = {
+  --   config = function()
+  --      require 'gitsigns'.setup{
+  --        current_line_blame = true,
+  --        current_line_blame_opts = {
+  --          delay = 0,
+  --        },
+  --      }
+  --    end,
+  --  },
   ["iamcco/markdown-preview.nvim"] = {
     ft = { "markdown" },
     run = "cd app && yarn install",
+  },
+  ["folke/todo-comments.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end,
   },
 }
 
