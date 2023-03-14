@@ -33,7 +33,8 @@ return {
   },
   ["williamboman/mason.nvim"] = { override_options = overrides.mason },
 
-  -- format & linting i need to revisit this :TODO
+  -- TODO:
+  -- format & linting i need to revisit this 
   --   ["jose-elias-alvarez/null-ls.nvim"] = {
   --     after = "nvim-lspconfig",
   --     config = function()

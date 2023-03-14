@@ -76,6 +76,7 @@ M.mason = {
     -- shell
     "shfmt",
     "shellcheck",
+    "bash-language-server",
     -- php/laravel
     "intelephense",
     "php-cs-fixer",
